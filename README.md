@@ -1,14 +1,23 @@
 # 智能体工程工作档案
 
-## 文件说明
+跨 Agent 系统配置层。集中管理各 AI 编程工具的共享规则、命令、插件引用，避免在每个机器上各自维护配置，造成碎片化。
 
-| 文件/目录 | 含义 |
-|-----------|------|
-| `index.md` | 首页 |
-| `CHANGELOG.md` | 版本历史 |
-| `AGENTS.md` | AI Agent 工作指南 |
-| `qtcloud-agent/` | 智能体云平台档案（业务） |
+## 定位
 
-## 参考
+- **非代码仓库** — 不存应用代码，只存 Agent 配置文件与引用源
+- **复用层** — 各 Agent（Zed、OpenCode、Hermes）的规则/命令/插件在此管理，安装脚本从各目录引用
+- **事实源** — 机器上的实际配置由此仓库同步得出，而非人工维护两份
 
-- https://github.com/quanttide/quanttide-profile-of-business-entity
+## 目录结构
+
+| 目录 | 对应工具 | 用途 |
+|------|---------|------|
+| `zed/` | Zed | 全局 AGENTS.md、settings.json 配置片段 |
+| `opencode/` | OpenCode CLI | 插件注册、命令集 |
+| `hermes/` | Hermes Agent | 插件引用、启用的 skills 清单 |
+
+## 维护原则
+
+- **以实际配置为准** — 本仓库从机器上的工作配置采集写入，而非凭空设计
+- **只存系统级配置** — 仓库级配置（如 `.hermes/plans/`）存在各仓库自己的 AGENTS.md，不放在这里
+- **发版后安装** — 修改后发 tag，安装脚本从 GH Release 拉取对应版本
