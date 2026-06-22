@@ -10,7 +10,8 @@ profile/
 │   ├── AGENTS.md      # → ~/.config/zed/AGENTS.md
 │   └── settings.json  # → ~/.config/zed/settings.json
 ├── opencode/
-│   └── README.md      # 配置说明（配置文件因含本地路径不纳入版本管理）
+│   ├── opencode.json  # → ~/.config/opencode/opencode.json
+│   └── README.md      # 配置说明
 ├── hermes/
 │   └── config.yaml    # → ~/.hermes/config.yaml
 ```
