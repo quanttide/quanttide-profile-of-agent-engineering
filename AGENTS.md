@@ -7,8 +7,8 @@ profile/
 ├── AGENTS.md          # 本文件
 ├── README.md          # 仓库定位与目录说明
 ├── zed/
-│   ├── AGENTS.md      # → ~/.config/zed/AGENTS.md
 │   └── settings.json  # → ~/.config/zed/settings.json
+│                      # AGENTS.md 由 ponytail 仓库统一管理，本目录不维护副本
 ├── opencode/
 │   ├── opencode.json  # → ~/.config/opencode/opencode.json
 │   └── README.md      # 配置说明
