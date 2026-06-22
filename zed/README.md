@@ -8,7 +8,6 @@
 |---|---|---|
 | `AGENTS.md` | `~/.config/zed/AGENTS.md` | Ponytail 系统提示词 — 定义 Agent 行为模式（懒人高效开发） |
 | `settings.json` | `~/.config/zed/settings.json` | 主配置 — 模型接入（DeepSeek + GLM）、Agent 工具权限、UI 主题字号 |
-| `instructions.md` | `~/.config/zed/agent/instructions.md` | Agent 指令 |
 
 ## 关键配置项
 

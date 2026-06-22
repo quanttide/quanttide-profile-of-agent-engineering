@@ -12,8 +12,7 @@ profile/
 ├── README.md          # 仓库定位与目录说明
 ├── zed/
 │   ├── AGENTS.md          # → ~/.config/zed/AGENTS.md
-│   ├── settings.json      # → ~/.config/zed/settings.json
-│   └── instructions.md    # → ~/.config/zed/agent/instructions.md
+│   └── settings.json      # → ~/.config/zed/settings.json
 └── opencode/
     └── command/       # Ponytail 命令（→ ~/.config/opencode/command/）
 ```
