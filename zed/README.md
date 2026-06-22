@@ -9,6 +9,8 @@
 | `AGENTS.md` | `~/.config/zed/AGENTS.md` | Ponytail 系统提示词 — 定义 Agent 行为模式（懒人高效开发） |
 | `settings.json` | `~/.config/zed/settings.json` | 主配置 — 模型接入（DeepSeek + GLM）、Agent 工具权限、UI 主题字号 |
 
+> 完整配置参考见 `data/library/zed/config.md`。
+
 ## 关键配置项
 
 - **主力模型**：DeepSeek V4 Flash（高努力模式，开启思考）

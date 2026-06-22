@@ -11,7 +11,15 @@ profile/
 ├── README.md          # 仓库定位与目录说明
 ├── zed/
 │   ├── AGENTS.md          # → ~/.config/zed/AGENTS.md
-│   └── settings.json      # → ~/.config/zed/settings.json
+│   ├── settings.json      # → ~/.config/zed/settings.json
+│   └── README.md          # zed 配置说明
+├── opencode/
+│   ├── opencode.json      # → ~/.config/opencode/opencode.json
+│   └── README.md          # opencode 配置说明
+├── hermes/
+│   ├── config.yaml        # → ~/.hermes/config.yaml
+│   └── README.md          # hermes 配置说明
+└── README.md              # 本文件
 ```
 
 ## 维护规范
