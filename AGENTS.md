@@ -17,8 +17,8 @@ profile/
     │   └── config.yaml    # → ~/.hermes/config.yaml
     └── loops/
         ├── README.md      # loop 概念与范式
-        ├── dev.md         # 开发循环
-        └── planning.md    # 规划循环
+        ├── devops-code.md  # 开发循环
+        └── devops-plan.md  # 规划循环
 ```
 
 ## 维护规范

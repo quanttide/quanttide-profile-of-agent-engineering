@@ -22,5 +22,5 @@
 
 | 循环 | 说明 |
 |------|------|
-| [dev.md](dev.md) | 开发循环：文档驱动 + 测试驱动 + 评审重构 |
-| [planning.md](planning.md) | 规划循环：intention → insights → roadmap |
+| [devops-code.md](devops-code.md) | 开发循环：文档驱动 + 测试驱动 + 评审重构 |
+| [devops-plan.md](devops-plan.md) | 规划循环：intention → insights → roadmap |
