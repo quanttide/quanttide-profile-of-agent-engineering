@@ -6,7 +6,7 @@
 #   devops-plan.sh <任务目录> --check   # 校验各阶段产物是否齐备（默认）
 #   devops-plan.sh <任务目录> --dry-run # 预览产物清单，不校验
 #
-# 产物约定（与 verification.md 一致）:
+# 产物约定（见 README.md 验证章节）:
 #   intention.md   → 阶段 1 意图
 #   insights.md    → 阶段 2 洞察
 #   roadmap.md     → 阶段 3 路线图

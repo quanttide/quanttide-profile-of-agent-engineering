@@ -6,7 +6,7 @@
 #   devops-code.sh <任务目录> --check   # 校验各阶段产物是否齐备（默认）
 #   devops-code.sh <任务目录> --dry-run # 预览产物清单，不校验
 #
-# 产物约定（与 verification.md 一致）:
+# 产物约定（见 README.md 验证章节）:
 #   docs/              → 阶段 1 写文档
 #   tests/             → 阶段 2 设置测试
 #   src/               → 阶段 3/4 设计与实现
