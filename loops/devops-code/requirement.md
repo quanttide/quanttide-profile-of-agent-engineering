@@ -30,4 +30,4 @@
 | 5 | 评审重构 | `review.md` | 先对照社区规范，再记录整理与重构 |
 | 6 | 回到产品视角 | `product-check.md` | 记录功能与预期的偏差及处理 |
 
-校验方式：按 [devops-code.yaml](devops-code.yaml) 的 steps 与产物清单逐站核对，产物缺失则本轮未完成。
+校验方式：按 [specification.yaml](specification.yaml) 的 steps 与产物清单逐站核对，产物缺失则本轮未完成。

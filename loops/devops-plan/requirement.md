@@ -21,4 +21,4 @@ intention → insights → roadmap
 | 2 | insights | `insights.md` | 洞察来自实践/数据，非凭空 |
 | 3 | roadmap | `roadmap.md` | 可执行、有阶段、可回查 |
 
-校验方式：按 [devops-plan.yaml](devops-plan.yaml) 的 steps 与产物清单逐站核对，产物缺失则本轮未完成。
+校验方式：按 [specification.yaml](specification.yaml) 的 steps 与产物清单逐站核对，产物缺失则本轮未完成。

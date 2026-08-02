@@ -23,7 +23,7 @@ steps:
   - name: 设计模块和测试实现
     actor: ai
     note: 按文档与测试设计模块
-    artifact: src/ + tests/ 对应
+    artifact: src/
     check: 模块结构与测试对应
 
   - name: 测试和代码实现

@@ -15,16 +15,16 @@
 ## 承载方式
 
 - 一个 loop 需要一个流程来承载，哪怕只是一个简单的 SH 脚本或 Python 脚本
-- 本仓库用 **YAML 定义 steps**（见 [devops-code.yaml](devops-code.yaml)、[devops-plan.yaml](devops-plan.yaml)），展示性与结构化优于脚本，比 Markdown 更适合程序读取
+- 本仓库用 **YAML 定义 steps**（见 [devops-code/specification.yaml](devops-code/specification.yaml)、[devops-plan/specification.yaml](devops-plan/specification.yaml)），展示性与结构化优于脚本，比 Markdown 更适合程序读取
 - 可以用 Markdown 把 harness 写成 loop，叫 loop engineering
 - 需要在 PI 的基础上进行封装
 
 ## 目录
 
-| 循环 | 说明 | 定义 |
-|------|------|------|
-| [devops-code.md](devops-code.md) | 开发循环：文档驱动 + 测试驱动 + 评审重构 | [devops-code.yaml](devops-code.yaml) |
-| [devops-plan.md](devops-plan.md) | 规划循环：intention → insights → roadmap | [devops-plan.yaml](devops-plan.yaml) |
+| 循环 | 说明 | 定义 | 实现 |
+|------|------|------|------|
+| [devops-code](devops-code/requirement.md) | 开发循环：文档驱动 + 测试驱动 + 评审重构 | [specification.yaml](devops-code/specification.yaml) | [implementation.py](devops-code/implementation.py) |
+| [devops-plan](devops-plan/requirement.md) | 规划循环：intention → insights → roadmap | [specification.yaml](devops-plan/specification.yaml) | — |
 
 ## 验证
 
@@ -70,5 +70,6 @@
 
 YAML 定义包含完整的循环结构：`entry`/`exit`（人类视角起止）、`steps`（每步含 actor / artifact / check）、`feedback`（反馈点）、`loop`（重跑与退出条件）、`metrics`（度量指标）。
 
-- [devops-code.yaml](devops-code.yaml) — 开发循环定义
-- [devops-plan.yaml](devops-plan.yaml) — 规划循环定义
+- [devops-code/specification.yaml](devops-code/specification.yaml) — 开发循环定义
+- [devops-plan/specification.yaml](devops-plan/specification.yaml) — 规划循环定义
+- [devops-code/implementation.py](devops-code/implementation.py) — 基于 LangGraph 的循环智能体实现（读取 specification.yaml 执行，human 步骤与反馈点 interrupt 等人）
