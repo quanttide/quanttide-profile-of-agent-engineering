@@ -3,26 +3,60 @@
 name: devops-code
 description: 开发循环——从文档出发，经测试、实现、评审，回到产品视角
 
+# 循环范式：从人类视角出发，回到人类视角
+entry: 人类提出任务与预期（产品/用户视角）
+exit: 人类确认回到产品视角的检查无偏差
+
 steps:
   - name: 先写文档
+    actor: ai          # human | ai | human+ai
     note: 不一定要是 specification，没必要过于严格
     artifact: docs/
+    check: 能说清要做什么
 
   - name: 设置测试
+    actor: ai
     note: 文档驱动、测试驱动比纯文档流程更严格一点，更有用
     artifact: tests/
+    check: 存在且可运行
 
   - name: 设计模块和测试实现
+    actor: ai
     note: 按文档与测试设计模块
     artifact: src/ + tests/ 对应
+    check: 模块结构与测试对应
 
   - name: 测试和代码实现
+    actor: ai
     note: 可重复运行
+    check: 测试通过
 
   - name: 评审中不断整理和重构
+    actor: human+ai
     note: 先根据社区的规范来，再考虑最后怎么去写
     artifact: review.md
+    check: 先对照社区规范，再记录整理与重构
 
   - name: 回到产品视角
+    actor: human
     note: 看功能实现与预期的偏差，及时发现、及时规划
     artifact: product-check.md
+    check: 记录功能与预期的偏差及处理
+
+# 反馈点：loop 的灵魂——一轮后必须停下与人交互
+feedback:
+  - after: 回到产品视角
+    actor: human
+    ask: 功能实现与预期有无偏差？是否进入下一轮？
+
+# 循环条件：什么情况下重跑、什么情况下退出
+loop:
+  condition: 有偏差或产物不达标 → 回到对应步骤重做
+  exit: 人类确认无偏差
+
+# 度量指标（验证用，阈值经试点后校准）
+metrics:
+  - rounds       # 完成任务的循环次数
+  - time         # 人 + 机总耗时
+  - corrections  # 人修正 AI 产物的次数
+  - rework       # 因偏差重做的阶段数 / 总阶段数

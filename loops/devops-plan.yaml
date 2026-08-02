@@ -3,15 +3,43 @@
 name: devops-plan
 description: 规划循环——从想法到落实，一轮后与人确认再进入下一轮
 
+# 循环范式：从人类视角出发，回到人类视角
+entry: 人类提出意图
+exit: 人类确认 roadmap 可执行
+
 steps:
   - name: intention
+    actor: human
     note: 意图明确可表述
     artifact: intention.md
+    check: 意图明确可表述
 
   - name: insights
+    actor: ai
     note: 洞察来自实践/数据，非凭空
     artifact: insights.md
+    check: 洞察来自实践/数据，非凭空
 
   - name: roadmap
+    actor: ai
     note: 可执行、有阶段、可回查
     artifact: roadmap.md
+    check: 可执行、有阶段、可回查
+
+# 反馈点：loop 的灵魂——一轮后必须停下与人交互
+feedback:
+  - after: roadmap
+    actor: human
+    ask: 意图与洞察是否符合预期？确认后进入执行或修订
+
+# 循环条件：什么情况下重跑、什么情况下退出
+loop:
+  condition: 意图或洞察不符合预期 → 回到相应步骤修订
+  exit: 人类确认 roadmap 可执行
+
+# 度量指标（验证用，阈值经试点后校准）
+metrics:
+  - rounds       # 完成任务的循环次数
+  - time         # 人 + 机总耗时
+  - corrections  # 人修正 AI 产物的次数
+  - rework       # 因偏差重做的阶段数 / 总阶段数

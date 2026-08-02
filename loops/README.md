@@ -68,5 +68,7 @@
 
 ### Loop 定义
 
-- [devops-code.yaml](devops-code.yaml) — 开发循环定义（steps + 产物清单）
-- [devops-plan.yaml](devops-plan.yaml) — 规划循环定义（steps + 产物清单）
+YAML 定义包含完整的循环结构：`entry`/`exit`（人类视角起止）、`steps`（每步含 actor / artifact / check）、`feedback`（反馈点）、`loop`（重跑与退出条件）、`metrics`（度量指标）。
+
+- [devops-code.yaml](devops-code.yaml) — 开发循环定义
+- [devops-plan.yaml](devops-plan.yaml) — 规划循环定义
