@@ -24,7 +24,7 @@
 | 循环 | 说明 | 定义 | 实现 |
 |------|------|------|------|
 | [devops-code](devops-code/requirement.md) | 开发循环：文档驱动 + 测试驱动 + 评审重构 | [specification.yaml](devops-code/specification.yaml) | [implementation.py](devops-code/implementation.py) |
-| [devops-plan](devops-plan/requirement.md) | 规划循环：intention → insights → roadmap | [specification.yaml](devops-plan/specification.yaml) | — |
+| [devops-plan](devops-plan/requirement.md) | 规划循环：intention → insights → roadmap | [specification.yaml](devops-plan/specification.yaml) | [implementation.py](devops-plan/implementation.py) |
 
 ## 验证
 
@@ -73,3 +73,4 @@ YAML 定义包含完整的循环结构：`entry`/`exit`（人类视角起止）�
 - [devops-code/specification.yaml](devops-code/specification.yaml) — 开发循环定义
 - [devops-plan/specification.yaml](devops-plan/specification.yaml) — 规划循环定义
 - [devops-code/implementation.py](devops-code/implementation.py) — 基于 LangGraph 的循环智能体实现（读取 specification.yaml 执行，human 步骤与反馈点 interrupt 等人）
+- [devops-plan/implementation.py](devops-plan/implementation.py) — 同上，规划循环实现（共享同一套实现，venv 复用 devops-code/.venv）
