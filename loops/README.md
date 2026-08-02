@@ -24,3 +24,9 @@
 |------|------|
 | [devops-code.md](devops-code.md) | 开发循环：文档驱动 + 测试驱动 + 评审重构 |
 | [devops-plan.md](devops-plan.md) | 规划循环：intention → insights → roadmap |
+
+## 验证
+
+- [verification.md](verification.md) — 验收标准（产物清单、反馈点检查、度量指标）
+- [devops-code.sh](devops-code.sh) — 开发循环承载脚本（`--check` 产物断言）
+- [devops-plan.sh](devops-plan.sh) — 规划循环承载脚本（`--check` 产物断言）
