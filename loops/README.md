@@ -15,15 +15,16 @@
 ## 承载方式
 
 - 一个 loop 需要一个流程来承载，哪怕只是一个简单的 SH 脚本或 Python 脚本
+- 本仓库用 **YAML 定义 steps**（见 [devops-code.yaml](devops-code.yaml)、[devops-plan.yaml](devops-plan.yaml)），展示性与结构化优于脚本，比 Markdown 更适合程序读取
 - 可以用 Markdown 把 harness 写成 loop，叫 loop engineering
 - 需要在 PI 的基础上进行封装
 
 ## 目录
 
-| 循环 | 说明 |
-|------|------|
-| [devops-code.md](devops-code.md) | 开发循环：文档驱动 + 测试驱动 + 评审重构 |
-| [devops-plan.md](devops-plan.md) | 规划循环：intention → insights → roadmap |
+| 循环 | 说明 | 定义 |
+|------|------|------|
+| [devops-code.md](devops-code.md) | 开发循环：文档驱动 + 测试驱动 + 评审重构 | [devops-code.yaml](devops-code.yaml) |
+| [devops-plan.md](devops-plan.md) | 规划循环：intention → insights → roadmap | [devops-plan.yaml](devops-plan.yaml) |
 
 ## 验证
 
@@ -65,7 +66,7 @@
 - 产物断言由承载脚本 `--check` 自动执行，人工复核反馈点与偏差记录
 - 试点与对比结果记录在 `trials/` 下
 
-### 承载脚本
+### Loop 定义
 
-- [devops-code.sh](devops-code.sh) — 开发循环承载脚本（`--check` 产物断言）
-- [devops-plan.sh](devops-plan.sh) — 规划循环承载脚本（`--check` 产物断言）
+- [devops-code.yaml](devops-code.yaml) — 开发循环定义（steps + 产物清单）
+- [devops-plan.yaml](devops-plan.yaml) — 规划循环定义（steps + 产物清单）

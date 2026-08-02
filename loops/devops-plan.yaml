@@ -1,0 +1,17 @@
+# devops-plan — 规划循环
+# intention → insights → roadmap
+name: devops-plan
+description: 规划循环——从想法到落实，一轮后与人确认再进入下一轮
+
+steps:
+  - name: intention
+    note: 意图明确可表述
+    artifact: intention.md
+
+  - name: insights
+    note: 洞察来自实践/数据，非凭空
+    artifact: insights.md
+
+  - name: roadmap
+    note: 可执行、有阶段、可回查
+    artifact: roadmap.md

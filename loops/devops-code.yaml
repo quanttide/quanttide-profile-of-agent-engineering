@@ -1,0 +1,28 @@
+# devops-code — 开发循环
+# 文档驱动 + 测试驱动 + 评审重构
+name: devops-code
+description: 开发循环——从文档出发，经测试、实现、评审，回到产品视角
+
+steps:
+  - name: 先写文档
+    note: 不一定要是 specification，没必要过于严格
+    artifact: docs/
+
+  - name: 设置测试
+    note: 文档驱动、测试驱动比纯文档流程更严格一点，更有用
+    artifact: tests/
+
+  - name: 设计模块和测试实现
+    note: 按文档与测试设计模块
+    artifact: src/ + tests/ 对应
+
+  - name: 测试和代码实现
+    note: 可重复运行
+
+  - name: 评审中不断整理和重构
+    note: 先根据社区的规范来，再考虑最后怎么去写
+    artifact: review.md
+
+  - name: 回到产品视角
+    note: 看功能实现与预期的偏差，及时发现、及时规划
+    artifact: product-check.md
