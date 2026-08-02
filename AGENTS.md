@@ -6,14 +6,15 @@
 profile/
 ├── AGENTS.md          # 本文件
 ├── README.md          # 仓库定位与目录说明
-├── zed/
-│   └── settings.json  # → ~/.config/zed/settings.json
-│                      # AGENTS.md 由 ponytail 仓库统一管理，本目录不维护副本
-├── opencode/
-│   ├── opencode.json  # → ~/.config/opencode/opencode.json
-│   └── README.md      # 配置说明
-├── hermes/
-│   └── config.yaml    # → ~/.hermes/config.yaml
+└── agents/            # 各 Agent 系统配置
+    ├── zed/
+    │   └── settings.json  # → ~/.config/zed/settings.json
+    │                      # AGENTS.md 由 ponytail 仓库统一管理，本目录不维护副本
+    ├── opencode/
+    │   ├── opencode.json  # → ~/.config/opencode/opencode.json
+    │   └── README.md      # 配置说明
+    └── hermes/
+        └── config.yaml    # → ~/.hermes/config.yaml
 ```
 
 ## 维护规范
