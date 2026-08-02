@@ -20,6 +20,10 @@ profile/
     └── hermes/
         ├── config.yaml        # → ~/.hermes/config.yaml
         └── README.md          # hermes 配置说明
+└── loops/              # 从实践日志提取的循环范式
+    ├── README.md             # loop 概念与范式
+    ├── dev.md                # 开发循环
+    └── planning.md           # 规划循环
 ```
 
 ## 维护规范

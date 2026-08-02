@@ -13,8 +13,12 @@ profile/
     ├── opencode/
     │   ├── opencode.json  # → ~/.config/opencode/opencode.json
     │   └── README.md      # 配置说明
-    └── hermes/
-        └── config.yaml    # → ~/.hermes/config.yaml
+    ├── hermes/
+    │   └── config.yaml    # → ~/.hermes/config.yaml
+    └── loops/
+        ├── README.md      # loop 概念与范式
+        ├── dev.md         # 开发循环
+        └── planning.md    # 规划循环
 ```
 
 ## 维护规范
