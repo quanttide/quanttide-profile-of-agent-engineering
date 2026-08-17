@@ -18,3 +18,7 @@
 
 - 源码：https://github.com/liguobao/deepseek-harness-remote
 - 官网：dsh.r2049.cn
+
+### 配置
+
+官网注册登陆账户并获取八位数的连接码，交给AI配置。
