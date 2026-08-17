@@ -6,6 +6,12 @@
 
 - 源码：https://github.com/deepseek-ai/deepseek-harness
 
+### 配置
+
+设置开机自启动，以方便直接在本地访问。
+
+访问地址`127.0.0.1:3080`
+
 ## 插件
 
 ### 远程链接
