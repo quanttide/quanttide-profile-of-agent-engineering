@@ -24,6 +24,9 @@ profile/
     ├── README.md             # loop 概念与范式
     ├── devops-code.md         # 开发循环
     └── devops-plan.md         # 规划循环
+└── skills/             # 可安装技能（SKILL.md）
+    └── docs-format/
+        └── SKILL.md          # 文档格式技能，依据《量潮科技文档格式章程》
 ```
 
 ## 维护规范
