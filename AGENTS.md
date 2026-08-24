@@ -19,6 +19,9 @@ profile/
         ├── README.md      # loop 概念与范式
         ├── devops-code.md  # 开发循环
         └── devops-plan.md  # 规划循环
+    └── contexts/
+        ├── README.md      # 上下文概念与维护规范
+        └── asset-init.md  # 资产初始化场景
 ```
 
 ## 维护规范

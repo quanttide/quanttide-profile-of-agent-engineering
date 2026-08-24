@@ -24,6 +24,9 @@ profile/
     ├── README.md             # loop 概念与范式
     ├── devops-code.md         # 开发循环
     └── devops-plan.md         # 规划循环
+└── contexts/           # 从实践对话提取的场景上下文
+    ├── README.md             # 上下文概念与维护规范
+    └── asset-init.md         # 资产初始化场景（新建/补全领域仓库与聚合容器）
 └── skills/             # 可安装技能（SKILL.md）
     └── docs-format/
         └── SKILL.md          # 文档格式技能，依据《量潮科技文档格式章程》
