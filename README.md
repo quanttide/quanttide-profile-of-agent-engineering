@@ -5,31 +5,27 @@
 
 ## 目录结构
 
+仓库按**领域**为一级文件夹组织，未归入领域的通用内容存于 `default/`：
+
 ```
 profile/
 ├── AGENTS.md          # 本文件
 ├── README.md          # 仓库定位与目录说明
-└── agents/            # 各 Agent 系统配置
-    ├── zed/
-    │   ├── AGENTS.md          # → ~/.config/zed/AGENTS.md
-    │   ├── settings.json      # → ~/.config/zed/settings.json
-    │   └── README.md          # zed 配置说明
-    ├── opencode/
-    │   ├── opencode.json      # → ~/.config/opencode/opencode.json
-    │   └── README.md          # opencode 配置说明
-    └── hermes/
-        ├── config.yaml        # → ~/.hermes/config.yaml
-        └── README.md          # hermes 配置说明
-└── loops/              # 从实践日志提取的循环范式
-    ├── README.md             # loop 概念与范式
-    ├── devops-code.md         # 开发循环
-    └── devops-plan.md         # 规划循环
-└── contexts/           # 从实践对话提取的场景上下文
-    ├── README.md             # 上下文概念与维护规范
-    └── asset-init.md         # 资产初始化场景（新建/补全领域仓库与聚合容器）
-└── skills/             # 可安装技能（SKILL.md）
-    └── docs-format/
-        └── SKILL.md          # 文档格式技能，依据《量潮科技文档格式章程》
+├── default/           # 未分类的通用内容
+│   ├── agents/        # 各 Agent 系统配置
+│   │   ├── zed/               # → ~/.config/zed/
+│   │   ├── opencode/          # → ~/.config/opencode/
+│   │   ├── hermes/            # → ~/.hermes/
+│   │   └── dsh/               # → DeepSeek Harness
+│   ├── loops/         # 从实践日志提取的循环范式
+│   │   ├── README.md
+│   │   ├── devops-code/
+│   │   └── devops-plan/
+│   └── skills/        # 可安装技能（SKILL.md）
+│       └── docs-format/
+└── <domain>/          # 领域一级文件夹
+    └── contexts/      # 该领域从实践对话提取的场景上下文
+        └── README.md
 ```
 
 ## 维护规范

@@ -2,26 +2,26 @@
 
 ## 目录结构
 
+仓库按**领域**为一级文件夹组织，未归入领域的通用内容存于 `default/`：
+
 ```
 profile/
 ├── AGENTS.md          # 本文件
 ├── README.md          # 仓库定位与目录说明
-└── agents/            # 各 Agent 系统配置
-    ├── zed/
-    │   └── settings.json  # → ~/.config/zed/settings.json
-    │                      # AGENTS.md 由 ponytail 仓库统一管理，本目录不维护副本
-    ├── opencode/
-    │   ├── opencode.json  # → ~/.config/opencode/opencode.json
-    │   └── README.md      # 配置说明
-    ├── hermes/
-    │   └── config.yaml    # → ~/.hermes/config.yaml
-    └── loops/
-        ├── README.md      # loop 概念与范式
-        ├── devops-code.md  # 开发循环
-        └── devops-plan.md  # 规划循环
-    └── contexts/
-        ├── README.md      # 上下文概念与维护规范
-        └── asset-init.md  # 资产初始化场景
+├── default/           # 未分类的通用内容
+│   ├── agents/        # 各 Agent 系统配置
+│   │   ├── zed/       # → ~/.config/zed/
+│   │   ├── opencode/  # → ~/.config/opencode/
+│   │   ├── hermes/    # → ~/.hermes/
+│   │   └── dsh/       # → DeepSeek Harness
+│   ├── loops/         # 从实践日志提取的循环范式
+│   │   ├── README.md
+│   │   ├── devops-code/
+│   │   └── devops-plan/
+│   └── skills/        # 可安装技能（SKILL.md）
+│       └── docs-format/
+└── <domain>/          # 领域一级文件夹
+    └── contexts/      # 该领域的场景上下文
 ```
 
 ## 维护规范
