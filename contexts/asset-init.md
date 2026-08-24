@@ -1,29 +1,8 @@
 # 资产初始化上下文（asset-init）
 
-从资产初始化实践对话中提取的**活动记录**。内容尽可能忠实保留原始对话中的命令、消息与文档原文——惯例活动在每次初始化中反复复现，照此执行即可。
+从资产初始化实践对话中提取的**活动记录**。先忠实记录原始对话中的活动（命令、消息、文档原文），再总结其中反复出现的惯例与教训。
 
-## 场景与流程选择
-
-先判定本次初始化属于哪种场景，再走对应流程：
-
-| 场景 | 特征 | 执行流程 |
-|------|------|---------|
-| 新建领域第二大脑 | `domains/{name}` 全套仓库不存在 | 主流程（活动一至八） |
-| 资产聚合容器 | `assets/{name}` 聚合容器重建或新建 | 活动一 + 容器流程 |
-| 已有仓库补全 | 仓库成熟但 README 为 stub / 缺 LICENSE | 活动一 + 补全流程 |
-| 挂载已有产品仓库 | 产品应用仓库（qtcrowd、qtdocs）挂入领域 `apps/` | 挂载流程 |
-| 英文更名 | 命名需修正（如 documentation-engineering → document-engineering） | 更名流程 |
-
-## 命名惯例
-
-对话中反复确认的命名规则，在动手前确定：
-
-- 中文名：四字最佳（xx管理 / xx工程 / xx设计）
-- 英文名：单数，`{name}-management` 或 `{name}-engineering`
-- 缩写：市场通用缩写；超 8 字母缩写（`sec`、`ixd`、`entrep`、`docs`）
-- 配套仓库后缀与英文全名一致（更名时需同步改名 GitHub 仓库与所有引用）
-
-## 主流程：新建领域第二大脑
+## 活动记录
 
 ### 活动一：调查现状
 
@@ -49,8 +28,6 @@ cat <path>/README.md
 cat <path>/.gitmodules
 cat <path>/AGENTS.md
 ```
-
-判定初始化类型：新建全套 / 聚合容器 / 补全定义。
 
 ### 活动二：创建仓库
 
@@ -146,8 +123,6 @@ git submodule add https://github.com/quanttide/quanttide-intention-of-interactio
 cp /home/iguo/repos/quanttide/domains/quanttide-security/LICENSE /home/iguo/repos/quanttide/domains/quanttide-<name>/LICENSE
 ```
 
-领域仓库用 CC BY 4.0；资产聚合容器参照同类（如 intention 用 Apache 2.0）。
-
 ### 活动五：领域仓库提交推送
 
 对话原文（提交即推送）：
@@ -210,8 +185,6 @@ git commit -m "feat: 新增交互设计领域（quanttide-design）" 2>&1 && \
 git push 2>&1
 ```
 
-注意：根仓库工作区可能有并行待办，只用 `git add` 具体路径，禁止 `git add -A` 全量提交。
-
 ### 活动八：验证
 
 对话原文：
@@ -224,13 +197,11 @@ git log --oneline -2 && \
 git submodule status | head -7
 ```
 
-## 场景变体
+### 变体活动记录
 
-主流程之外，以下场景有专门流程。
+#### 资产聚合容器（quanttide-profile 重建）
 
-### 变体一：资产聚合容器
-
-适用于 `assets/{name}` 聚合容器（如 quanttide-profile 重建：注册系列档案仓库）。走活动一调查，然后注册该系列已有仓库：
+注册系列档案仓库的对话原文：
 
 ```bash
 cd /home/iguo/repos/quanttide/assets/quanttide-profile && \
@@ -241,29 +212,26 @@ for pair in "agent:quanttide-profile-of-agent-engineering" "course:quanttide-pro
 done
 ```
 
-容器文档（README）以「仓库定位 / 仓库结构 / 子模块管理 / 关联」组织，随后走活动五至八的提交推送。
+容器文档（README）以「仓库定位 / 仓库结构 / 子模块管理 / 关联」组织，随后走活动五至八。
 
-### 变体二：已有仓库补全
+#### 已有仓库补全（quanttide-asset、quanttide-media）
 
-适用于仓库成熟但 README 是 stub 的场景（如 quanttide-asset、quanttide-media）。走活动一调查确认，然后：
+仓库成熟但 README 是 stub 的场景。对话原文：
 
-- 重写 README：概述 / 领域边界 / 子模块表（**必须与实际 `.gitmodules` 对齐，不存在的子模块不写**）/ 许可
-- 若无 LICENSE：`cp` 同类仓库 LICENSE
-- CHANGELOG 追加：
-
-```markdown
-## [Unreleased]
-
-### Changed
-- 重写 README：补全领域定义（概述、领域边界、子模块结构、许可 CC BY 4.0）
+```bash
+# 重写 README：概述 / 领域边界 / 子模块表 / 许可
+# 若无 LICENSE：cp 同类仓库 LICENSE
+# CHANGELOG 追加：
+# ## [Unreleased]
+# ### Changed
+# - 重写 README：补全领域定义（概述、领域边界、子模块结构、许可 CC BY 4.0）
 ```
 
-- 提交消息：`docs: 初始化领域定义（重写 README + LICENSE）`
-- 随后走活动五至八的提交推送；若仓库目录注释与领域清单不一致（如「媒体资产」应为「新媒体运营」），同步修正根仓库 `domains/README.md`
+提交消息：`docs: 初始化领域定义（重写 README + LICENSE）`
 
-### 变体三：挂载已有产品仓库
+#### 挂载已有产品仓库（qtcrowd、qtdocs）
 
-适用于已有产品应用仓库（qtcrowd、qtdocs）挂入领域 `apps/`。在主流程活动三之后或领域建成后追加：
+对话原文：
 
 ```bash
 cd /home/iguo/repos/quanttide/domains/quanttide-crowd && \
@@ -274,11 +242,10 @@ git submodule add https://github.com/quanttide/qtcrowd.git apps/qtcrowd 2>&1
 - CHANGELOG：`- 注册子模块：`apps/qtcrowd`（量潮众包平台，与 quanttide-tech/apps 共用）`
 - 领域仓库提交：`chore: 注册 apps/qtcrowd 子模块（量潮众包平台）`
 - 根仓库提交：`chore: 更新 quanttide-crowd 子模块指针（注册 apps/qtcrowd）`
-- **共享仓库双挂载**：同一仓库被多个父仓库挂载时（如 qtcrowd 挂 quanttide-crowd 与 quanttide-tech），各父仓库是独立克隆，需分别更新指针
 
-### 变体四：英文更名
+#### 英文更名（documentation-engineering → document-engineering）
 
-适用于命名需修正的场景。对话原文（documentation-engineering → document-engineering）：
+对话原文：
 
 ```bash
 # 1. GitHub 仓库改名（4 个配套仓库，旧 URL 自动重定向）
@@ -302,13 +269,42 @@ done
 # 5. 分层提交：子模块 → 领域仓库（.gitmodules+README）→ 根仓库（领域清单+指针）
 ```
 
-## 注意事项（对话中反复出现的教训）
+## 总结
+
+### 场景判定
+
+调查现状后判定本次初始化属于哪种场景：
+
+- **新建领域第二大脑**：`domains/{name}` 全套仓库不存在 → 主流程（活动一至八）
+- **资产聚合容器**：`assets/{name}` 聚合容器重建或新建 → 活动一 + 容器流程
+- **已有仓库补全**：仓库成熟但 README 为 stub / 缺 LICENSE → 活动一 + 补全流程
+- **挂载已有产品仓库**：产品应用仓库挂入领域 `apps/` → 挂载流程
+- **英文更名**：命名需修正 → 更名流程
+
+### 命名惯例
+
+- 中文名：四字最佳（xx管理 / xx工程 / xx设计）
+- 英文名：单数，`{name}-management` 或 `{name}-engineering`
+- 缩写：市场通用缩写；超 8 字母缩写（`sec`、`ixd`、`entrep`、`docs`）
+- 配套仓库后缀与英文全名一致（更名时需同步改名 GitHub 仓库与所有引用）
+
+### 分层提交模式
+
+所有场景共用同一提交模式：**子模块 → 领域/容器仓库 → 根仓库，逐层提交推送（提交即推送）**。
+
+- 领域仓库提交：`chore: 初始化<中文名>领域仓库（注册配套子模块）`
+- 根仓库提交：`feat: 新增<中文名>领域（<仓库名>）`
+- 指针更新提交：`chore: 更新 <父仓库> 子模块指针（<原因>）`
+
+### 注意事项
 
 - **先调查后动手**：避免重复创建仓库（HTTP 422）或破坏已有内容
 - **远端冲突**：推送被拒时先 `git pull --rebase`，不要强推（对话中 rebase 合并过 26 个并行提交）
 - **契约优先**：`.quanttide/agent/contract.yaml` 要求用户确认的操作（git push、删除、改契约）先列清单等确认
 - **减法优先**：删除无效内容优先于新增；不确定的内容宁可空着
 - **文档与事实一致**：README 子模块表与实际 `.gitmodules` 对齐（对话中曾误写不存在的 `data/context` 后修正）
+- **并行协作安全**：根仓库工作区可能有并行待办，只用 `git add` 具体路径，禁止 `git add -A`
+- **共享仓库双挂载**：同一仓库被多个父仓库挂载时（如 qtcrowd 挂 quanttide-crowd 与 quanttide-tech），各父仓库是独立克隆，需分别更新指针
 
 ## 关联
 
