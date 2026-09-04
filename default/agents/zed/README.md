@@ -9,14 +9,16 @@
 
 | 文件 | 目标路径 | 说明 |
 |---|---|---|
-| `settings.json` | `~/.config/zed/settings.json` | 主配置 — 模型接入（DeepSeek + GLM）、Agent 工具权限、UI 主题字号 |
+| `settings.json` | `~/.config/zed/settings.json` | 主配置 — 模型接入（z.ai GLM + DeepSeek + MiMo）、Agent 工具权限、UI 主题字号 |
+| `zai-setup.md` | — | z.ai（GLM 5.3 系列）接入配置方法 |
+| `mimo-setup.md` | — | 小米 MiMo 接入配置方法 |
 
 > 完整配置参考见 `data/library/zed/config.md`。
 
 ## 关键配置项
 
-- **主力模型**：DeepSeek V4 Flash（高努力模式，开启思考）
-- **备用模型**：GLM-5.2 / GLM-5V-Turbo（智谱 OpenAI-compatible）
+- **主力模型**：GLM 5.3 Flash（z.ai，高努力模式，开启思考）
+- **备用模型**：GLM 5.3 / DeepSeek V4 Flash / MiMo 2.5 系列（均为 OpenAI-compatible）
 - **工具权限**：`write_file`、`edit_file` 等已配置 always_allow 路径白名单
 - **主题**：跟随系统（深色 One Dark / 浅色 One Light）
 - **字号**：UI 16px / 编辑器 15px
