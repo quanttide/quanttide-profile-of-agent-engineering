@@ -9,6 +9,16 @@
 {
   "cli_default_open_behavior": "existing_window",
   "language_models": {
+    "deepseek": {
+      "available_models": [
+        {
+          "name": "deepseek-flash",
+          "display_name": "DeepSeek V4.1 Flash",
+          "max_tokens": 1000000,
+          "max_output_tokens": 384000
+        }
+      ]
+    },
     "openai_compatible": {
       "zai": {
         "api_url": "https://api.z.ai/api/paas/v4",
@@ -124,9 +134,8 @@
       }
     },
     "default_model": {
-      "effort": "high",
-      "provider": "zai",
-      "model": "glm-5.3-flash",
+      "provider": "deepseek",
+      "model": "deepseek-flash",
       "enable_thinking": true
     },
     "favorite_models": [],
