@@ -93,6 +93,76 @@
             }
           }
         ]
+      },
+      "Kimi": {
+        "api_url": "https://api.moonshot.cn/v1",
+        "available_models": [
+          {
+            "name": "kimi-k3",
+            "display_name": "Kimi K3",
+            "max_tokens": 1048576,
+            "max_output_tokens": 131072,
+            "max_completion_tokens": 131072,
+            "reasoning_effort": "max",
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": true,
+              "max_tokens_parameter": false
+            }
+          },
+          {
+            "name": "kimi-k2.7-code",
+            "display_name": "Kimi K2.7 Code",
+            "max_tokens": 262144,
+            "max_output_tokens": 32768,
+            "max_completion_tokens": 32768,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": true,
+              "max_tokens_parameter": false
+            }
+          },
+          {
+            "name": "kimi-k2.7-code-highspeed",
+            "display_name": "Kimi K2.7 Code Highspeed",
+            "max_tokens": 262144,
+            "max_output_tokens": 32768,
+            "max_completion_tokens": 32768,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": true,
+              "max_tokens_parameter": false
+            }
+          },
+          {
+            "name": "kimi-k2.6",
+            "display_name": "Kimi K2.6",
+            "max_tokens": 262144,
+            "max_output_tokens": 32768,
+            "max_completion_tokens": 32768,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": true,
+              "max_tokens_parameter": false
+            }
+          }
+        ]
       }
     }
   },
