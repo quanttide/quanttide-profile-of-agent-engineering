@@ -8,6 +8,7 @@
 |------|------|------|
 | **glm-5.3** | 旗舰版 | 1M 上下文 / 128K 输出，纯文本，强制开启思考 |
 | **glm-5.3-flash** | 快速版 | 1M 上下文 / 128K 输出，支持图像输入（多模态） |
+| **glm-5.3-flashx** | 快速版提速 | 1M 上下文 / 128K 输出，支持图像输入（多模态），推理速度 200 tokens/s |
 
 ## API 配置
 
@@ -85,6 +86,23 @@ API 密钥不写入 `settings.json`，二选一：
               "interleaved_reasoning": false,
               "max_tokens_parameter": true
             }
+          },
+          {
+            "name": "glm-5.3-flashx",
+            "display_name": "GLM 5.3 FlashX",
+            "max_tokens": 1000000,
+            "max_output_tokens": 128000,
+            "max_completion_tokens": 128000,
+            "reasoning_effort": "max",
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": false,
+              "max_tokens_parameter": true
+            }
           }
         ]
       }
@@ -102,7 +120,7 @@ API 密钥不写入 `settings.json`，二选一：
 ## 注意事项
 
 1. **GLM-5.3 强制开启思考**：不可关闭，思考强度可在 Agent 面板模型选择处调整
-2. **Coding Plan 订阅用户**：只能走 `https://api.z.ai/api/coding/paas/v4`，否则请求失败
+2. **Coding Plan 订阅用户**：只能走 `https://api.z.ai/api/coding/paas/v4`，否则请求失败；套餐额度当前仅覆盖 GLM-5.3-Flash，FlashX 需按量计费
 3. **排错**：若调用报 `interleaved_reasoning` 相关错误，将 `capabilities.interleaved_reasoning` 改为 `true` 重试
 4. **密钥安全**：不要将 API 密钥提交到版本控制系统
 
@@ -110,4 +128,5 @@ API 密钥不写入 `settings.json`，二选一：
 
 - z.ai 官网: https://z.ai
 - GLM-5.3 模型文档: https://docs.z.ai/guides/llm/glm-5.3
+- GLM-5.3-Flash/FlashX 模型文档: https://docs.bigmodel.cn/cn/guide/models/vlm/glm-5.3-flash
 - Zed OpenAI-compatible 配置文档: https://zed.dev/docs/ai/use-api-access.html（OpenAI-Compatible Endpoints 一节）
