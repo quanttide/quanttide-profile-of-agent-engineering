@@ -80,33 +80,78 @@
         "api_url": "https://api.xiaomimimo.com/v1",
         "available_models": [
           {
-            "name": "mimo-v2.5-pro",
-            "display_name": "Mimo 2.5 Pro",
-            "max_tokens": 128000,
-            "max_output_tokens": 16384,
-            "max_completion_tokens": 16384,
-            "capabilities": {
-              "tools": true,
-              "images": false,
-              "parallel_tool_calls": false,
-              "prompt_cache_key": false,
-              "chat_completions": true,
-              "interleaved_reasoning": false
-            }
-          },
-          {
-            "name": "mimo-v2.5",
-            "display_name": "Mimo 2.5",
-            "max_tokens": 128000,
-            "max_output_tokens": 16384,
-            "max_completion_tokens": 16384,
+            "name": "mimo-v2.6-pro",
+            "display_name": "MiMo 2.6 Pro",
+            "max_tokens": 1048576,
+            "max_output_tokens": 131072,
+            "max_completion_tokens": 131072,
             "capabilities": {
               "tools": true,
               "images": true,
               "parallel_tool_calls": false,
               "prompt_cache_key": false,
               "chat_completions": true,
-              "interleaved_reasoning": false
+              "interleaved_reasoning": true
+            }
+          },
+          {
+            "name": "mimo-v2.6-flash",
+            "display_name": "MiMo 2.6 Flash",
+            "max_tokens": 1048576,
+            "max_output_tokens": 131072,
+            "max_completion_tokens": 131072,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": true
+            }
+          },
+          {
+            "name": "mimo-v2.6-pro-ultraspeed",
+            "display_name": "MiMo 2.6 Pro UltraSpeed",
+            "max_tokens": 1048576,
+            "max_output_tokens": 131072,
+            "max_completion_tokens": 131072,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": true
+            }
+          },
+          {
+            "name": "mimo-v2.5-pro",
+            "display_name": "Mimo 2.5 Pro",
+            "max_tokens": 1048576,
+            "max_output_tokens": 131072,
+            "max_completion_tokens": 131072,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": true
+            }
+          },
+          {
+            "name": "mimo-v2.5",
+            "display_name": "Mimo 2.5",
+            "max_tokens": 1048576,
+            "max_output_tokens": 131072,
+            "max_completion_tokens": 131072,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": false,
+              "prompt_cache_key": false,
+              "chat_completions": true,
+              "interleaved_reasoning": true
             }
           }
         ]
