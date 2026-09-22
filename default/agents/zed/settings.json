@@ -266,9 +266,8 @@
       }
     },
     "default_model": {
-      "effort": "max",
-      "provider": "zai",
-      "model": "glm-5.3-flash",
+      "provider": "Xiaomi.MiMo",
+      "model": "mimo-v2.6-flash",
       "enable_thinking": true
     },
     "favorite_models": [],

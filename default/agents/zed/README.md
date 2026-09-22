@@ -19,8 +19,8 @@
 
 ## 关键配置项
 
-- **主力模型**：DeepSeek V4.1 Flash（原生 DeepSeek provider，模型 ID `deepseek-flash`，1M 上下文 / 384K 输出，开启思考）
-- **备用模型**：GLM 5.3 / GLM 5.3 Flash / GLM 5.3 FlashX（z.ai，OpenAI-compatible）、DeepSeek V4 Flash / V4 Pro（原生 provider 内置）、MiMo 2.6 系列（OpenAI-compatible）、Kimi K3 / K2.7 Code / K2.6（Kimi，OpenAI-compatible）
+- **主力模型**：MiMo 2.6 Flash（OpenAI-compatible `Xiaomi.MiMo`，模型 ID `mimo-v2.6-flash`，1M 上下文 / 128K 输出，开启思考）
+- **备用模型**：MiMo 2.6 Pro / 2.6 Pro UltraSpeed（同一 provider）、GLM 5.3 / GLM 5.3 Flash / GLM 5.3 FlashX（z.ai，OpenAI-compatible）、DeepSeek V4.1 Flash / V4 Pro（原生 provider 内置）、Kimi K3 / K2.7 Code / K2.6（Kimi，OpenAI-compatible）
 - **工具权限**：`write_file`、`edit_file` 等已配置 always_allow 路径白名单
 - **主题**：跟随系统（深色 One Dark / 浅色 One Light）
 - **字号**：UI 16px / 编辑器 15px
