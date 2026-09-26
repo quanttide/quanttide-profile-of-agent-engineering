@@ -12,13 +12,14 @@
 
 ```yaml
 model:
-  provider: deepseek
-  default: deepseek-flash
+  provider: xiaomi-token-plan
+  default: mimo-v2.6-flash
   # base_url: 仅自定义 OpenAI 兼容端点需要；内置 provider 有默认值
 ```
 
 - `provider` 用内置 provider id；常见别名会被归一化（`glm` / `z.ai` → `zai`，`mimo` → `xiaomi`，`kimi` / `moonshot` → `kimi-coding`）
-- 当前默认：`deepseek` / `deepseek-flash`（DeepSeek V4.1 Flash）
+- 当前默认：`xiaomi-token-plan` / `mimo-v2.6-flash`（MiMo 2.6 Flash，Token Plan 套餐）
+- MiMo 按计费方式分开配置：内置 `xiaomi` 走按量付费 API（`XIAOMI_API_KEY`，`sk-` 前缀），用户插件 `xiaomi-token-plan` 走套餐（`XIAOMI_TOKEN_PLAN_API_KEY`，`tp-` 前缀），两者并存
 
 ## 常用 provider
 
@@ -29,7 +30,7 @@ model:
 | `xiaomi` | Xiaomi MiMo | `https://api.xiaomimimo.com/v1` | `XIAOMI_API_KEY` |
 | `kimi-coding` | Kimi / Moonshot | `https://api.moonshot.ai/v1` | `KIMI_API_KEY` |
 
-MiMo Token Plan 需自定义 `base_url: https://token-plan-cn.xiaomimimo.com/v1`，密钥为 `tp-` / `ttp-` 前缀。
+MiMo Token Plan 不再用内置 `xiaomi` 加 `base_url` 覆盖，而是配置为独立的用户 provider 插件 `~/.hermes/plugins/model-providers/xiaomi-token-plan/`（`base_url: https://token-plan-cn.xiaomimimo.com/v1`，密钥环境变量 `XIAOMI_TOKEN_PLAN_API_KEY`，`tp-` / `ttp-` 前缀），与内置按量付费 `xiaomi` provider 并存。
 
 ## 切换模型
 
