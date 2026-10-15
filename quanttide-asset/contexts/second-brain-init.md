@@ -80,7 +80,7 @@ domains/quanttide-{name}/
 - **data 三件套追加**：补 `data/context`、`data/journal`，按需补 `data/intention`
 - **意图仓库**：主文档 `index.md` = 背景与动机 → 统一框架 → 云模块设计 → 建设路径；素材取自 journal 与产品思路
 - **已有仓库补全**：先调查现状（是否成熟、README 是否 stub、缺什么），再按类型处理（补全领域定义 / 重建聚合容器）
-- **聚合容器初始化**：能力轴容器参照同类容器组织，注册既有 `-of-{name}` 系列，许可证参照同类容器（容器 Apache 2.0，领域 CC BY 4.0）
+- **聚合容器初始化**：范畴轴容器参照同类容器组织，注册既有 `-of-{name}` 系列，许可证参照同类容器（容器 Apache 2.0，领域 CC BY 4.0）
 - **产品应用挂载**：既有产品应用与领域配套云是两个层级；挂入 `apps/` 时保持 README 子模块表与 CHANGELOG 同步
 - **官网前台初始化**：`src/site` = Vite + React + TypeScript，页面内容源自产品意图档案，构建与 lint 验证通过再提交
 - **发布流程**：预检查 → 固化 Unreleased → 记录发布日志 → 打标签 → 发布
@@ -105,13 +105,13 @@ domains/quanttide-{name}/
 可沉淀为「格式校验」Skill。读取到的三类契约（全文见原始材料）：
 
 - **文档工程契约**（`.quanttide/docs/contract.yaml`）：最多 3 级标题、文档标题 h1、代码块必须标语言（围栏式）、文件名小写、目录名复数。配套「文档格式技能」补充：尽量少用表格与加粗、中文引号使用「」
-- **数字资产契约**（`.quanttide/asset/contract.yaml`）：按能力轴 + 领域轴组织，与 `.gitmodules` 对齐，条目字段 `title/type/category/audience/path/description`；演进方向为补 `structure:` 与 `relations:` 使统一框架机器可读
+- **数字资产契约**（`.quanttide/asset/contract.yaml`）：按范畴轴 + 领域轴组织，与 `.gitmodules` 对齐，条目字段 `title/type/category/audience/path/description`；演进方向为补 `structure:` 与 `relations:` 使统一框架机器可读
 - **AI 执行审核契约**（`.quanttide/agent/contract.yaml`）：带契约限制的仓库，需审核操作（删除/推送/改契约等）先列清单等确认；读取类与普通写文档免审
 
 ## 提交与协作规范
 
 - **CHANGELOG**：Keep a Changelog 格式；新领域写完整 `[0.1.0]` 初始化记录；常规变更记 `[Unreleased]`；对用户可见变更须更新，ROADMAP 等规划类不记（最小干预）
-- **许可证**：领域仓库一律 CC BY 4.0；资产/能力轴容器用 Apache 2.0；既有成熟应用保留原许可证
+- **许可证**：领域仓库一律 CC BY 4.0；范畴轴容器用 Apache 2.0；既有成熟应用保留原许可证
 - **提交信息**：领域与根仓库用 Conventional Commits（中文描述）；日志仓库按惯例用日期
 - **分层提交 / 提交即推送**：子模块 → 领域仓库 → 根仓库逐层提交推送，禁止越级；子模块文件在子模块内提交，父仓库只更新指针
 - **并行协作安全**：只用 `git add` 具体路径，禁止 `git add -A`；远端被拒先 `git pull --rebase`；子模块 detached HEAD 先 `git checkout main`
