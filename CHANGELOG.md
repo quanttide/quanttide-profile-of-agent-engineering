@@ -10,6 +10,7 @@
 
 ### 变更
 
+- 拆分 AGENTS 与 CONTRIBUTING：目录结构、维护规范、提交指针移入新增的 CONTRIBUTING.md，AGENTS.md 只留角色、判据与任务单元
 - 扩充 `contexts/second-brain-init.md`：合并脱敏对话内容，新增「背景与体系」「对话流程总览」「格式规范与契约」「关键决策记录」章节，并强化命名惯例（命名规则、仓库命名模式、领域统一结构）
 - 仓库按领域一级文件夹重构：`asset-init` 更名 `second-brain-init`，归入 `quanttide-asset/contexts/`，原始对话移至 `quanttide-asset/sessions/`；未归领域内容存 `default/`
 
